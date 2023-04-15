@@ -1,0 +1,28 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css");
+@import url("https://cdn.jsdelivr.net/gh/chick0/fonts@master/d2coding/d2coding.min.css");
+
+:root {
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+        "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        sans-serif;
+
+    font-weight: 400;
+}
+
+.timer {
+    font-family: Chivo Mono;
+    font-weight: 900;
+}
+
+html {
+    background-color: #212121;
+    color: #fff;
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        background-color: #fff;
+        color: #000;
+    }
+}
