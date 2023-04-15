@@ -12,7 +12,7 @@
             } else {
                 timer.classList.remove("warn")
             }
-        }, 500)
+        }, 250)
     })
 
     onDestroy(() => {
