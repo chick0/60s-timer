@@ -8,13 +8,6 @@
             navigator.wakeLock
                 // @ts-ignore
                 .request("screen")
-                .then((lock) => {
-                    console.log(lock)
-
-                    lock.addEventListener("release", () => {
-                        alert("Screen Wake Lock released:" + lock.released)
-                    })
-                })
                 .catch((err) => {
                     console.error(`${err.name}, ${err.message}`)
                 })
