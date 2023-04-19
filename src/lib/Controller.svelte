@@ -102,7 +102,7 @@
     {#if intervalId == undefined}
         <button class="green" on:click="{register}">시작</button>
     {:else}
-        <button class="red" on:click="{unregister}">일시정지</button>
+        <button class="red" on:click="{unregister}">정지</button>
     {/if}
 
     <button on:click="{reset}">초기화</button>
