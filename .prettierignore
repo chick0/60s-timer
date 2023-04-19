@@ -1,6 +1,8 @@
 node_modules
 /dist
 
+index.html
+
 # Ignore files for YARN
 .pnp.*
 .yarn/*

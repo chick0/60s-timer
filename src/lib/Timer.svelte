@@ -27,12 +27,13 @@
     })
 </script>
 
-<p class="timer shadow" bind:this="{timer}">{$timeLeft}</p>
+<p bind:this="{timer}">{$timeLeft}</p>
 
 <style>
     p {
+        font-family: Chivo Mono;
+        font-weight: 900;
         font-size: 300px;
-        font-weight: bold;
         width: 100%;
         text-align: center;
     }
