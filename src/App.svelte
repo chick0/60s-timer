@@ -34,14 +34,17 @@
 </div>
 
 <style>
-    div {
-        display: flex;
-    }
+    /* Not Mobile */
+    @media (min-width: 768px) {
+        div {
+            display: flex;
+        }
 
-    div > div {
-        height: 100vh;
-        width: 50vw;
-        justify-content: center;
-        align-items: center;
+        div > div {
+            height: 100vh;
+            width: 50vw;
+            justify-content: center;
+            align-items: center;
+        }
     }
 </style>

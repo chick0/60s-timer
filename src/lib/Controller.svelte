@@ -85,6 +85,18 @@
         color: #ffffff;
     }
 
+    /* Mobile */
+    @media (max-width: 768px) {
+        div {
+            display: flex;
+        }
+
+        button {
+            width: calc(50% - 25px) !important;
+            font-size: 20px !important;
+        }
+    }
+
     @media (prefers-color-scheme: dark) {
         button {
             background-color: #4f4f7d;

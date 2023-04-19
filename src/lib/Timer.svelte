@@ -31,6 +31,12 @@
         text-align: center;
     }
 
+    @media (min-width: 1000px) {
+        p {
+            font-size: 500px;
+        }
+    }
+
     .warn {
         color: crimson;
         text-shadow: crimson 1px 0 15px;
