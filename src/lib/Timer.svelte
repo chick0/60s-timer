@@ -8,9 +8,15 @@
     onMount(() => {
         intervalId = setInterval(() => {
             if ($timeLeft < 15) {
-                timer.classList.toggle("warn")
+                if (timer.dataset.status != "a") {
+                    timer.dataset.status = "a"
+                    timer.style = "color: #dc143c"
+                } else {
+                    timer.dataset.status = "b"
+                    timer.style = "color: #ff5151"
+                }
             } else {
-                timer.classList.remove("warn")
+                timer.style = ""
             }
         }, 250)
     })
@@ -21,7 +27,7 @@
     })
 </script>
 
-<p class="timer warn" bind:this="{timer}">{$timeLeft}</p>
+<p class="timer shadow" bind:this="{timer}">{$timeLeft}</p>
 
 <style>
     p {
@@ -35,10 +41,5 @@
         p {
             font-size: 500px;
         }
-    }
-
-    .warn {
-        color: crimson;
-        text-shadow: crimson 1px 0 15px;
     }
 </style>
