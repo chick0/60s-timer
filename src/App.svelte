@@ -5,12 +5,8 @@
 
     onMount(() => {
         if ("wakeLock" in navigator) {
-            navigator.wakeLock
-                // @ts-ignore
-                .request("screen")
-                .catch((err) => {
-                    console.error(`${err.name}, ${err.message}`)
-                })
+            // @ts-ignore
+            navigator.wakeLock.request("screen")
         } else {
             console.warn("화면 잠금 방지를 요청할 수 없음")
         }
