@@ -36,22 +36,20 @@
                     timerAudioController.currentTime = 0
                 }
 
-                timerAudioController?.play()
-                    .catch(() => {
-                        alert("제한 시간이 종료되었습니다!")
+                timerAudioController?.play().catch(() => {
+                    alert("제한 시간이 종료되었습니다!")
 
-                        if(confirm("소리를 재생하시겠습니까?")) {
-                            timerAudioController?.play()
-                                .catch((err) => {
-                                    if(err.name == "NotAllowedError") {
-                                        alert("알림 소리를 자동으로 재생할 수 없습니다! 아래 소리 재생 버튼을 눌러주세요")
-                                        showPlayRequest = true
-                                    } else {
-                                        alert("알림 소리 재생에 오류가 발생했습니다.\n" + err)
-                                    }
-                                })
-                        }
-                    })
+                    if (confirm("소리를 재생하시겠습니까?")) {
+                        timerAudioController?.play().catch((err) => {
+                            if (err.name == "NotAllowedError") {
+                                alert("알림 소리를 자동으로 재생할 수 없습니다! 아래 소리 재생 버튼을 눌러주세요")
+                                showPlayRequest = true
+                            } else {
+                                alert("알림 소리 재생에 오류가 발생했습니다.\n" + err)
+                            }
+                        })
+                    }
+                })
             }
         }, 1000)
     }
@@ -63,7 +61,7 @@
         if (intervalId != undefined) {
             clearInterval(intervalId)
             intervalId = undefined
-            timerAudioController?.pause();
+            timerAudioController?.pause()
         }
     }
 
@@ -72,7 +70,7 @@
      */
     function reset() {
         timeLeft.set(60)
-        timerAudioController?.pause();
+        timerAudioController?.pause()
     }
 
     let intervalId = undefined
@@ -91,12 +89,12 @@
 
 {#if showPlayRequest}
     <div>
-        <button on:click="{() => {
-            timerAudioController?.play()
-                .then(() => {
+        <button
+            on:click="{() => {
+                timerAudioController?.play().then(() => {
                     showPlayRequest = false
                 })
-        }}">소리 재생</button>
+            }}">소리 재생</button>
     </div>
 {/if}
 
