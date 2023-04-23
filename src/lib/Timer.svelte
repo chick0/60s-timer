@@ -38,7 +38,7 @@
         text-align: center;
     }
 
-    @media (min-width: 1000px) {
+    @media (min-width: 1200px) {
         p {
             font-size: 500px;
         }
